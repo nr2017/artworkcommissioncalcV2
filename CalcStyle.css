@@ -1,0 +1,97 @@
+/* Calculator stylesheet */
+.auto-style1 {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 16px;
+	color: #008080;		
+}
+.auto-style2 {
+	border: 1px solid #008080;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+}
+.error {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 16px;
+	color: #FF0000;		
+}
+.totals {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 16px;
+	color: #008080;
+    border:1px solid gray;
+    padding-left: 20px;	
+}
+
+.box-shadow {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  box-shadow: 5px 10px #888888;
+}
+.roundedTotal {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 50px;
+	color: #008080;
+}
+
+/* Calculator style buttons */
+.calcButton {
+  display: inline-block;
+  padding: 3px 30px;
+  font-size: 14px;
+  font-family: "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+
+.spacer {
+  padding: 3px 5px;
+  color: #ffffff;
+}
+
+.calcButton:hover {background-color: #3e8e41
+}
+
+.calcButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.resetButton {
+  display: inline-block;
+  padding: 3px 30px;
+  font-size: 14px;
+  font-family: "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+
+.resetButton:hover {background-color: #e60000}
+
+.resetButton:active {
+  background-color: #e60000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
