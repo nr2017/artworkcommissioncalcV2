@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>artwork commission calculator</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Neil Robinson, Art/Printmaker specialising in landscapes and seascapes. I work with intaglio printing techniques such as etching aquatint and relief techniques such as linocut.">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript,commission calculator">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript,Artist,Printmaker,Blog,StockportInPrint,OnlineShop,Redbubble,Intaglio,Northwest England,UK,GB,Acrylics,Watercolour,Painting,Sketches,Etchings,Lino-cut,Screen-printing,Gelli-printing,Stockport,commission calculator">
+<meta name="author" content="Neil Robinson">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/CalcStyle.css"> 
+<script src="commCalc2.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" /> <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png"/>
+</head>
+<body>
+
+<!-- page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+	<div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px">
+ 
+	<!-- calculator section -->
+		  <h1 class="w3-wide">Artwork Commission Calculator</h1>
+<table style="width: 100%" class="box-shadow">
+
+<td><img src="images/The_cage_at_Lyme_Park.jpg" align="right" style="width:75%"></td>
+<td><img src="images/calculator_cut_out.png" style="width:40%"></td>
+  
+  <tr>
+  <td style="height: 30px"></td>
+  </tr>
+  
+	<tr>
+		<td style="width: 218px" align="right" class="auto-style1">Total production costs (&pound)</td>
+		<td style="width: 268px">
+		<form method="post">
+			<input align="left" style="width: 150px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="prodCosts" maxlength="10"/></form>
+		</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 218px" align="right" class="auto-style1">Hourly rate (&pound)</td>
+		<td style="width: 268px">
+		<form method="post">
+			<input align="left" style="width: 70px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="hourlyRate" maxlength="10"/></form>
+		</td>
+	</tr>
+	
+		<tr>
+		<td style="width: 218px" align="right" class="auto-style1">Number of hours</td>
+		<td style="width: 268px">
+		<form method="post">
+			<input align="left" style="width: 30px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="numberHours" maxlength="2"/></form>
+		</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 218px" align="right" class="auto-style1">Transportation costs (&pound)</td>
+		<td style="width: 268px">
+		<form method="post">
+			<input align="left" style="width: 150px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="transportationCosts" maxlength="10"/></form>
+		</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 218px" align="right" class="auto-style1">Total framing costs (&pound)</td>
+		<td style="width: 268px">
+		<form method="post">
+			<input align="left" style="width: 150px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="mountFrameCosts" maxlength="10"/></form>
+		</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 218px" align="right" class="auto-style1">Commission rate (%)</td>
+		<td style="width: 268px">
+		<form method="post">
+			<input align="left" style="width: 40px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="galleryCommission" maxlength="3"/></form>
+			<tr>
+			
+			  <tr>
+  <td style="height: 20px"></td>
+  </tr>
+			
+		<td button class="calcButton" align="right" class="calcButton" onclick="myFunction()  value="Calculate" id="totalPriceButton">Calculate</button></td>
+		<td button class="resetButton" align="right" class="buttonStyle" value="Reset" onclick="window.location.reload(true)">Reset</button></td>
+	</tr>
+	<tr>
+		<td style="height: 30px"></td>
+	</tr> 
+	
+	<tr>
+		<td colspan="2" style="width: 800px" class="error"><div id="error"></div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2" style="width: 800px" class="error"><div id="percentage"></div>
+		</td>
+	</tr>
+	
+	<tr>
+    <td style="height: 15px"></td>
+    </tr> 
+		
+	<tr>
+	<td class="auto-style1">Totals</td>
+	<td class="auto-style1">Rounded Total (Cost x 2 rounded to nearest £5)</td>
+	</tr>
+   
+  <tr>
+  <td style="width: 50% ; height: 160px" class="totals"><h5><div "padding: 10px" align="left" id="totalOutput"></div></h5></td></td><br>
+  <td style="width: 50% ; height: 160px" class="totals"><h3><div align="center" id="roundedOutput" class="roundedTotal"></div></h3></td>
+  </tr>
+  
+  <tr>
+  <td style="height: 25px"></td>
+  </tr> 
+  
+</table>
+  
+<!-- end of page content -->
+</div>
+
+<!-- footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-white w3-xlarge">
+
+  
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium">Developed by <a href="https://neilrobinson.me.uk/" target="_blank">Neil Robinson</a></p>
+  <div class="w3-white w3-center w3-padding-12"><span lang="en-gb"><h6>&#169; Neil Robinson</h6>
+  <br></br>
+</footer>
+
+</body>
+</html>
