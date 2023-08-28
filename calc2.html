@@ -36,7 +36,7 @@
   </tr>
   
 	<tr>
-		<td style="width: 218px" align="right" class="auto-style1">Total production costs (&pound)</td>
+		<td style="width: 218px" align="right" class="auto-style1">Total production costs* (&pound)</td>
 		<td style="width: 268px">
 		<form method="post">
 			<input align="left" style="width: 150px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="prodCosts" maxlength="10"/></form>
@@ -44,18 +44,33 @@
 	</tr>
 	
 	<tr>
-		<td style="width: 218px" align="right" class="auto-style1">Hourly rate (&pound)</td>
+		<td colspan="2" style="width: 800px" class="error"><div id="productionCosts"></div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 218px" align="right" class="auto-style1">Hourly rate* (&pound)</td>
 		<td style="width: 268px">
 		<form method="post">
 			<input align="left" style="width: 70px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="hourlyRate" maxlength="10"/></form>
 		</td>
 	</tr>
 	
+	<tr>
+		<td colspan="2" style="width: 800px" class="error"><div id="rateHours"></div>
+		</td>
+	</tr>
+	
 		<tr>
-		<td style="width: 218px" align="right" class="auto-style1">Number of hours</td>
+		<td style="width: 218px" align="right" class="auto-style1">Number of hours*</td>
 		<td style="width: 268px">
 		<form method="post">
 			<input align="left" style="width: 30px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="numberHours" maxlength="2"/></form>
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2" style="width: 800px" class="error"><div id="hours"></div>
 		</td>
 	</tr>
 	
@@ -76,11 +91,16 @@
 	</tr>
 	
 	<tr>
-		<td style="width: 218px" align="right" class="auto-style1">Commission rate (%)</td>
+		<td style="width: 218px" align="right" class="auto-style1">Commission rate (%)*</td>
 		<td style="width: 268px">
 		<form method="post">
 			<input align="left" style="width: 40px; height: 30px" class="auto-style1 tabindex="0" type="text" value="" id="galleryCommission" maxlength="3"/></form>
 			<tr>
+			
+	<tr>
+		<td colspan="2" style="width: 800px" class="error"><div id="percentage"></div>
+		</td>
+	</tr>
 			
 			  <tr>
   <td style="height: 20px"></td>
@@ -93,15 +113,14 @@
 		<td style="height: 30px"></td>
 	</tr> 
 	
+
+	
 	<tr>
-		<td colspan="2" style="width: 800px" class="error"><div id="error"></div>
+		<td colspan="2" style="width: 800px" class="error"><div id="errorTotal"></div>
 		</td>
 	</tr>
 	
-	<tr>
-		<td colspan="2" style="width: 800px" class="error"><div id="percentage"></div>
-		</td>
-	</tr>
+
 	
 	<tr>
     <td style="height: 15px"></td>
@@ -115,6 +134,10 @@
   <tr>
   <td style="width: 50% ; height: 160px" class="totals"><h5><div "padding: 10px" align="left" id="totalOutput"></div></h5></td></td><br>
   <td style="width: 50% ; height: 160px" class="totals"><h3><div align="center" id="roundedOutput" class="roundedTotal"></div></h3></td>
+  </tr>
+  
+  <tr>
+  <td class="auto-style1">* = Mandatory fields</td>
   </tr>
   
   <tr>

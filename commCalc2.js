@@ -41,31 +41,75 @@
 		var totalHourlyPayElem = document.getElementById("totalHourlyRate");
 		var totalOutputElem = document.getElementById("totalOutput");
 		var roundedOutputElem = document.getElementById("roundedOutput");
-		var errorElem = document.getElementById("error");
+		
+		//Error message variables
+		var prodCostsElem = document.getElementById("productionCosts");
+		var hoursRateElem = document.getElementById("rateHours");
+		var hoursElem = document.getElementById("hours");
 		var commissionErrorElem = document.getElementById("percentage");
+		var errorTotalElem = document.getElementById("errorTotal");
 		
-		let = percentage;
-		//error handling
-		if (isNaN(commission) || (commission) < 1 ) {
-			  commissionErrorElem.innerHTML = "Enter a minimum of 1% commission.";
 		
-		} else if (commission > 60 ) {
-			  commissionErrorElem.innerHTML = "Enter a maximum of 60% commission.";
+		let = productionCosts
+		//error handling (Production costs)
+		if (isNaN(production) || (production) < 1 ) {
+			  prodCostsElem.innerHTML = "Enter the total production costs. ";
+		
+		} else if (production > 999 ) {
+			  prodCostsElem.innerHTML = "Amount entered cannot be more than £999.";
 		
 		} else {	
-			   commissionErrorElem.innerHTML = "";
+			  prodCostsElem.innerHTML = "";
 		}
 		
 		
-		let = error;
-		if (isNaN(total) || (total) < 1 ) {
-			  errorElem.innerHTML = "Enter amounts above. Where no amount is required input zero. " + "<br>" + "Decimal points accepted, no commas allowed.";
+		let = rateHours
+		//error handling (Hourly rate)
+		if (isNaN(hourRate) || (hourRate) < 1 ) {
+			  hoursRateElem.innerHTML = "Enter the hourly rate above. ";
 		
-		} else if (total > 10000 ) {
-			  errorElem.innerHTML = "Warning: A total of &pound" + Math.round(total) + " will require extra insurance cover if over £10k.";
+		} else if (hourRate > 999 ) {
+			  hoursRateElem.innerHTML = "Hours entered cannot be more than £999.";
 		
 		} else {	
-			   errorElem.innerHTML = "";
+			  hoursRateElem.innerHTML = "";
+		}
+		
+		let = hours;
+		//error handling (Hours worked)
+		if (isNaN(numHours) || (numHours) < 1 ) {
+			  hoursElem.innerHTML = "Enter number of hours worked. ";
+		
+		} else if (numHours > 72 ) {
+			  hoursElem.innerHTML = "Hours entered cannot be more than 72.";
+		
+		} else {	
+			  hoursElem.innerHTML = "";
+		}
+	
+		let = percentage;
+		//error handling (Commission rate)
+		if (isNaN(commission) || (commission) < 1 ) {
+			  commissionErrorElem.innerHTML = "Enter a minimum of 1% commission.";
+		
+		} else if (commission > 100 ) {
+			  commissionErrorElem.innerHTML = "Enter a maximum of 100% commission.";
+		
+		} else {	
+			  commissionErrorElem.innerHTML = "";
+		}
+		
+		let = errorTotal;
+		//error handling (Total)
+		if (isNaN(total) || (total) < 1 ) {
+			  errorTotalElem.innerHTML = "Enter amounts more than £1. Where no amount or time is required, input zero. " + "<br>" + "Decimal points accepted, no commas allowed.";
+		
+		} else if (total > 10000 ) {
+			  errorTotalElem.innerHTML = "Warning: A total of &pound" + Math.round(total) + " will require extra insurance cover if over £10k.";
+		
+		} else {	
+			  errorTotalElem.innerHTML = "";
+			
 			   
 		//totals
 		totalOutputElem.innerHTML = 
