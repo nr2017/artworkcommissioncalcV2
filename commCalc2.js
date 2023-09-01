@@ -80,8 +80,8 @@
 		if (isNaN(numHours) || (numHours) < 1 ) {
 			  hoursElem.innerHTML = "Enter number of hours worked. ";
 		
-		} else if (numHours > 72 ) {
-			  hoursElem.innerHTML = "Hours entered cannot be more than 72.";
+		} else if (numHours > 999 ) {
+			  hoursElem.innerHTML = "Hours entered cannot be more than 999.";
 		
 		} else {	
 			  hoursElem.innerHTML = "";
@@ -89,8 +89,8 @@
 	
 		let = percentage;
 		//error handling (Commission rate)
-		if (isNaN(commission) || (commission) < 1 ) {
-			  commissionErrorElem.innerHTML = "Enter a minimum of 1% commission.";
+		if (isNaN(commission) || (commission) < 0 ) {
+			  commissionErrorElem.innerHTML = "Enter minimum of 0% (if commission not applicable).";
 		
 		} else if (commission > 100 ) {
 			  commissionErrorElem.innerHTML = "Enter a maximum of 100% commission.";
